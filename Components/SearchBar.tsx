@@ -34,6 +34,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ darkTheme, onFocusHandler,
           onChangeText={(text) => setSearchTerm(text)}
           value={searchTerm}
           placeholder="Search here ..."
+          placeholderTextColor={darkTheme ? '#d3d3d3': '#555555'}
           autoCapitalize="none"
         />
       </View>
