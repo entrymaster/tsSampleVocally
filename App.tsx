@@ -6,6 +6,7 @@ import { BottomTab } from "./Components/BottomTab";
 import { RoundButton } from "./Components/RoundButton";
 import { SearchBar } from "./Components/SearchBar";
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { Banner } from "./Components/Banner";
 
 export default function App() {
   const [region, setRegion] = useState({
@@ -252,8 +253,8 @@ export default function App() {
 
   const markers = [
     {
-      label: "Player 1",
-      description: "This is the description of the player.",
+      label: "Place 1",
+      description: "This is the description of the place.",
       icon: require("./assets/burger.png"),
       latlng: {
         latitude: 26.851102,
@@ -261,8 +262,8 @@ export default function App() {
       },
     },
     {
-      label: "Player 2",
-      description: "This is the description of the player.",
+      label: "Place 2",
+      description: "This is the description of the place.",
       icon: require("./assets/pizza.png"),
       latlng: {
         latitude: 26.868968,
@@ -270,8 +271,8 @@ export default function App() {
       },
     },
     {
-      label: "Player 3",
-      description: "This is the description of the player.",
+      label: "Place 3",
+      description: "This is the description of the place.",
       icon: require("./assets/burger.png"),
       latlng: {
         latitude: 26.828775,
@@ -279,8 +280,8 @@ export default function App() {
       },
     },
     {
-      label: "Player 4",
-      description: "This is the description of the player.",
+      label: "Place 4",
+      description: "This is the description of the place.",
       icon: require("./assets/pharma.png"),
       latlng: {
         latitude: 26.809483,
@@ -288,8 +289,8 @@ export default function App() {
       },
     },
     {
-      label: "Player 5",
-      description: "This is the description of the player.",
+      label: "Place 5",
+      description: "This is the description of the place.",
       icon: require("./assets/beer.png"),
       latlng: {
         latitude: 26.842928,
@@ -297,8 +298,8 @@ export default function App() {
       },
     },
     {
-      label: "Player6",
-      description: "This is the description of the player.",
+      label: "Place6",
+      description: "This is the description of the place.",
       icon: require("./assets/tea.png"),
       latlng: {
         latitude: 26.831098,
@@ -306,8 +307,8 @@ export default function App() {
       },
     },
     {
-      label: "Player 7",
-      description: "This is the description of the player.",
+      label: "Place 7",
+      description: "This is the description of the place.",
       icon: require("./assets/coffee.png"),
       latlng: {
         latitude: 26.86327,
@@ -340,15 +341,10 @@ export default function App() {
         ))}
       </MapView>
       </TouchableWithoutFeedback>
-      <View
-        style={{
-          position: "absolute",
-          top: 25,
-          width: "100%",
-        }}
-      >
+     
         <SearchBar darkTheme={darkTheme} />
-      </View>
+        
+      
       <View style={styles.toggleButton}>
         <RoundButton darkTheme={darkTheme} onPressHandler={() => setDarkTheme(!darkTheme)} >
         <Ionicons name="options" size={28} color={darkTheme? "white":"black"} />
@@ -360,9 +356,10 @@ export default function App() {
         </RoundButton>
       </View>
 
-      <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
+      
+        <Banner darkTheme={darkTheme} />
+
         <BottomTab darkTheme={darkTheme} />
-      </View>
     </View>
   );
 }

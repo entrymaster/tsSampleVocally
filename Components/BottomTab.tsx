@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
         height: 65,
         width:'100%',
         flexDirection:'row',
-        justifyContent:'space-around'
+        justifyContent:'space-around',
+        position: "absolute", bottom: 0
     },
     containerDark:{
         backgroundColor:'#000',

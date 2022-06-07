@@ -32,15 +32,17 @@ export const SearchBar: React.FC<SearchBarProps> = ({ darkTheme }) => {
           autoCapitalize="none"
         />
       </View>
+     
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    position: "absolute",
     width: "90%",
     left: "5%",
-    top: "25%",
+    top: 35,
   },
   shadowIOS: {
     shadowColor: "#000",
@@ -52,14 +54,13 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
   },
   shadowAndroid: {
-    elevation: 8,
+    elevation: 10,
     shadowColor: '#000'
   },
   input: {
     fontSize: 15,
     color: "#8c8c8c",
     fontWeight: "600",
-    borderRadius: 15,
     width: "85%",
     paddingLeft: 5,
   },
