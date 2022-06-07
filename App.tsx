@@ -7,6 +7,7 @@ import {
   Keyboard,
   Text
 } from "react-native";
+import Constants from "expo-constants";
 import MapView from "react-native-maps";
 import { Marker } from "react-native-maps";
 import { BottomTab } from "./Components/BottomTab";
@@ -104,6 +105,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    marginTop: Constants.statusBarHeight
   },
   map: {
     width: Dimensions.get("window").width,
