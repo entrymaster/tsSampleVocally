@@ -22,7 +22,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ darkTheme, onFocusHandler,
           style={{ padding: 5 }}
           name="search"
           size={28}
-          color="grey"
+          color={darkTheme ? '#d3d3d3': '#555555'}
         />
         <TextInput
           style={[
