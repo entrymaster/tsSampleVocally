@@ -60,7 +60,7 @@ export default function App() {
         <View style={[styles.searchResult, { backgroundColor: darkTheme ? "#333333" : "#fff" },]}>
           {
             searchResult.map((item, index)=>(
-              <Text key={index} style={styles.searchText}>{item}</Text>
+              <Text key={index} style={[styles.searchText, {color: darkTheme? '#d3d3d3': '#444444'}]}>{item}</Text>
             ))
           }
         </View>
@@ -130,7 +130,6 @@ const styles = StyleSheet.create({
   },
   searchText:{
     fontSize:16,
-    color:'#444444',
     borderBottomWidth:0.6,
     borderBottomColor:'grey',
     paddingVertical:10,
