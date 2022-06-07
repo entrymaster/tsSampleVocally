@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
         height: 65,
         width:'100%',
         flexDirection:'row',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        position: "absolute", bottom: 0
     },
     tabTile:{
         padding:10

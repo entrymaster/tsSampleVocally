@@ -10,7 +10,7 @@ export const Banner: React.FC<BannnerProps> = ({darkTheme})=>{
         <View style={[styles.container, Platform.OS === 'ios' ? styles.shadowIOS: styles.shadowAndroid, {backgroundColor: darkTheme ? '#333333': '#fff' }]}>
             <Image style={styles.image} source={require("../assets/pub.png")} />
             <View style={styles.bannerText}>
-            <Text style={styles.bannerHeading}>Lokál Hamburk</Text>
+            <Text style={[styles.bannerHeading, {color: darkTheme ? '#d3d3d3': '#000' }]}>Lokál Hamburk</Text>
             <Text style={styles.bannerDesc}>Pub in Prague</Text>
             </View>
         </View>

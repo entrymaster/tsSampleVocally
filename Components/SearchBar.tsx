@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, StyleSheet, TextInput, Platform } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
 type SearchBarProps = {
   darkTheme: boolean;
+  onFocusHandler: ()=>void;
+  onBlurHandler: ()=>void;
 };
 
-export const SearchBar: React.FC<SearchBarProps> = ({ darkTheme }) => {
+export const SearchBar: React.FC<SearchBarProps> = ({ darkTheme, onFocusHandler, onBlurHandler }) => {
+  const [searchTerm, setSearchTerm] = useState('');
   return (
     <View style={[styles.container, Platform.OS === 'ios' ? styles.shadowIOS: styles.shadowAndroid]}>
       <View
@@ -26,8 +29,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({ darkTheme }) => {
             styles.input,
             { backgroundColor: darkTheme ? "#333333" : "#fff" },
           ]}
-          // onChangeText={(text) => setSearchTerm(text)}
-          // value={searchTerm}
+          onFocus={onFocusHandler}
+          onBlur={onBlurHandler}
+          onChangeText={(text) => setSearchTerm(text)}
+          value={searchTerm}
           placeholder="Search here ..."
           autoCapitalize="none"
         />
